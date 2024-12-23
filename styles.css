@@ -1,4 +1,4 @@
-/* styles.css */
+/* General styles remain the same */
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +34,7 @@ body {
 }
 
 .title {
-    font-size: 3rem; /* Larger title font */
+    font-size: 3rem;
     margin-bottom: 40px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
@@ -52,18 +52,18 @@ body {
     border-radius: 30px;
     background: transparent;
     color: transparent;
-    font-size: 1.2rem; /* Larger button font */
+    font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
-    text-shadow: 0 0 0 white; /* Transparent text outline */
+    text-shadow: 0 0 0 white;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .mode-button.active {
-    background: rgba(255, 255, 255, 0.8); /* White background */
+    background: rgba(255, 255, 255, 0.8);
     color: transparent;
-    text-shadow: 0 0 0 black; /* Transparent font with black outline */
+    text-shadow: 0 0 0 black;
     font-weight: bold;
 }
 
@@ -74,7 +74,7 @@ body {
 }
 
 .timer {
-    font-size: 6rem; /* Larger timer font */
+    font-size: 6rem;
     font-weight: bold;
     margin-bottom: 30px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
@@ -118,15 +118,15 @@ body {
     border-radius: 30px;
     background: transparent;
     color: transparent;
-    text-shadow: 0 0 0 white; /* Transparent text with white outline */
+    text-shadow: 0 0 0 white;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .start-button:hover {
-    background: rgba(255, 255, 255, 0.8); /* White background */
+    background: rgba(255, 255, 255, 0.8);
     color: black;
-    text-shadow: none; /* Revert text-shadow on hover */
+    text-shadow: none;
 }
 
 .start-button.active {
@@ -135,4 +135,70 @@ body {
     text-shadow: none;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
 
+    .timer {
+        font-size: 4rem;
+    }
+
+    .mode-buttons {
+        gap: 10px;
+    }
+
+    .mode-button {
+        padding: 8px 20px;
+        font-size: 1rem;
+    }
+
+    .icon-controls {
+        gap: 20px;
+    }
+
+    .spotify-widget iframe {
+        width: 250px;
+        height: 60px;
+    }
+
+    .start-button {
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .timer {
+        font-size: 3rem;
+    }
+
+    .mode-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mode-button {
+        padding: 5px 15px;
+        font-size: 0.9rem;
+    }
+
+    .icon-controls {
+        gap: 15px;
+    }
+
+    .spotify-widget iframe {
+        width: 200px;
+        height: 50px;
+    }
+
+    .start-button {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
