@@ -9,25 +9,28 @@
 </head>
 <body>
     <div id="app">
-    <div id="background"></div>
-    <div class="mode-buttons">
-        <button id="pomodoro" class="mode-button active">pomodoro</button>
-        <button id="short-break" class="mode-button">short break</button>
-        <button id="long-break" class="mode-button">long break</button>
+        <div id="background"></div>
+        <div class="mode-buttons">
+            <button id="pomodoro" class="mode-button active">pomodoro</button>
+            <button id="short-break" class="mode-button">short break</button>
+            <button id="long-break" class="mode-button">long break</button>
+        </div>
+        <div id="time-display" class="timer">25:00</div>
+        <div class="icon-controls">
+            <i id="reset" class="icon fa-solid fa-rotate"></i>
+            <i id="settings-button" class="icon fa-solid fa-gear"></i>
+            <input type="file" id="background-upload" accept="image/*" />
+        </div>
+        <button id="start-button" class="start-button">Start</button>
+        <div class="spotify-widget">
+            <input id="spotify-input" type="text" placeholder="Paste your Spotify playlist URL here" />
+            <button id="add-playlist-button">Add Playlist</button>
+            <iframe id="spotify-frame"
+                    src="https://open.spotify.com/embed/playlist/4MqIDVcpVUYpoUjDDeAdRD"
+                    width="300" height="80" frameborder="0" allow="encrypted-media">
+            </iframe>
+        </div>
     </div>
-    <div id="time-display" class="timer">25:00</div>
-    <div class="icon-controls">
-        <i id="reset" class="icon fa-solid fa-rotate"></i>
-        <i id="settings-button" class="icon fa-solid fa-gear"></i>
-        <input type="file" id="background-upload" accept="image/*" />
-    </div>
-    <button id="start-button" class="start-button">Start</button>
-    <div class="spotify-widget">
-        <iframe src="https://open.spotify.com/embed/playlist/4MqIDVcpVUYpoUjDDeAdRD"
-                width="300" height="80" frameborder="0" allow="encrypted-media">
-        </iframe>
-    </div>
-</div>
 
     <script src="script.js"></script>
 </body>

@@ -117,5 +117,17 @@ backgroundUpload.addEventListener("change", (e) => {
     }
 });
 
+document.getElementById('add-playlist-button').addEventListener('click', function () {
+    const input = document.getElementById('spotify-input').value;
+    const frame = document.getElementById('spotify-frame');
+    if (input.startsWith('https://open.spotify.com/playlist/')) {
+        const embedUrl = input.replace('open.spotify.com', 'open.spotify.com/embed');
+        frame.src = embedUrl;
+    } else {
+        alert('Please enter a valid Spotify playlist URL.');
+    }
+});
+
+
 // Initialize timer display
 updateTimerDisplay();
